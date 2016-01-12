@@ -11,6 +11,7 @@ namespace Example
         static void Main(string[] args)
         {
             string s = Console.ReadLine();
+            int a = int.Parse(Console.ReadLine());
             Console.WriteLine(s);
             Console.ReadKey();
         }
