@@ -15,6 +15,10 @@ namespace Example
             // init array
             int[] b = { 1, 2, 3, 4, 5};
 
+            int[,] bb = { { 1,2,3}, {4, 5, 6} };
+            //1 2 3 
+            //4 5 6
+
             // two dimension array
             int[,,] c = new int[4, 5, 6];
 
