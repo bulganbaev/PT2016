@@ -6,34 +6,58 @@ using System.Threading.Tasks;
 
 namespace Example
 {
+    class Complex
+    {
+        public int a, b;
+        public Complex(int a, int b)
+        {
+            this.a = a;
+            this.b = b;
+        }
+
+        //public Complex Add(Complex complex)
+        //{
+        //    Complex c = new Complex(this.a + complex.a, this.b + complex.b);
+        //    return c;
+        //}
+
+        public static Complex operator +(Complex c1, Complex c2)
+        {
+            Complex c3 = new Complex(c1.a + c2.a, c1.b + c2.b);
+            return c3;
+        }
+
+        public override string ToString()
+        {
+            return a + "/" + b;
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            // creating array
-            int[] a = new int[5];
-            // init array
-            int[] b = { 1, 2, 3, 4, 5};
+            //int a = 5;
+            //string s = a.ToString();
 
-            int[,] bb = { { 1,2,3}, {4, 5, 6} };
-            //1 2 3 
-            //4 5 6
+            //Complex c = new Complex(4, 5);
+            //Complex d = new Complex(5, 6);
 
-            // two dimension array
-            int[,,] c = new int[4, 5, 6];
+            //Complex w = c + d + c + d;
+            //Console.WriteLine(w);
 
-            // jaggled array
-            int[][] d = new int[5][];
-            for (int i = 0; i < 5; i++)
+            //Console.ReadKey();
+            // 5 6 7
+
+            string s = "hello world 1 2 3";
+            string[] t = s.Split();
+            foreach(string a in t)
             {
-                d[i] = new int[i + 1];
+                Console.WriteLine(a);
             }
-
-            foreach(int x in b)
-            {
-                Console.WriteLine(x);
-            }
+            Console.WriteLine(s.Substring(2, 3));
+            Console.WriteLine(s.Replace("llo", "ttv"));
             Console.ReadKey();
+
         }
     }
 }
