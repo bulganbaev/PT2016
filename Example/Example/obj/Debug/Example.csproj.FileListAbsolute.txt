@@ -1,0 +1,6 @@
+c:\users\fl education\documents\visual studio 2015\Projects\Example\Example\bin\Debug\Example.exe.config
+c:\users\fl education\documents\visual studio 2015\Projects\Example\Example\bin\Debug\Example.exe
+c:\users\fl education\documents\visual studio 2015\Projects\Example\Example\bin\Debug\Example.pdb
+c:\users\fl education\documents\visual studio 2015\Projects\Example\Example\obj\Debug\Example.csprojResolveAssemblyReference.cache
+c:\users\fl education\documents\visual studio 2015\Projects\Example\Example\obj\Debug\Example.exe
+c:\users\fl education\documents\visual studio 2015\Projects\Example\Example\obj\Debug\Example.pdb
