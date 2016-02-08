@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snake", "snake\snake.csproj", "{A2751525-9460-4528-80D5-9F77D58FFDFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2751525-9460-4528-80D5-9F77D58FFDFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2751525-9460-4528-80D5-9F77D58FFDFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2751525-9460-4528-80D5-9F77D58FFDFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2751525-9460-4528-80D5-9F77D58FFDFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
