@@ -98,7 +98,6 @@ namespace filemanager
                          }
                        
                         path = path.Remove(path.Length - count-1);
-                        
                         filem(path);
                         break;
                 
