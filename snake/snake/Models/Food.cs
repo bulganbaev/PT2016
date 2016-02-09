@@ -14,23 +14,32 @@ namespace snake.models
             color = ConsoleColor.Yellow;
             sign = '$';
             setNewPosition();
+           
         }
 
         public void setNewPosition()
         {
             
-            int x = (new Random().Next()) % 20;
-            int y = (new Random().Next()) % 20;
-            if (body.Count == 0)
-                body.Add(new Point(x, y));
-            else
-            {
-                body[0].x = x;
-                body[0].y = y;
-            }
-          
-          
+           
+                int x = (new Random().Next()) % 20;
+                int y = (new Random().Next()) % 20;
+                if (body.Count == 0)
+                    body.Add(new Point(x, y));
+                else
+                {
+                    body[0].x = x;
+                    body[0].y = y;
+                }
+        
+
+
+
+
+
+
 
         }
+    
+
     }
 }

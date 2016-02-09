@@ -9,17 +9,21 @@ namespace snake.models
 {
     public class Wall: Drawer
     {
+        public int level = 0;
         public Wall()
         {
+           
             color = ConsoleColor.Red;
             sign = '#';
-            setLevel(1);
+            setLevel(level);
+            
         }
 
         public void setLevel(int level)
         {
+            level++;
             string fileName = string.Format(@"C:\Users\User\Desktop\map\level{0}.txt", level);
-            FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.ReadWrite);
             StreamReader sr = new StreamReader(fs);
 
             string map = sr.ReadToEnd();
@@ -41,7 +45,7 @@ namespace snake.models
                 body.Add(new Point(0, i));
             for (int i = 0; i < 30; i++)
                 body.Add(new Point(66,i));
-           
+          
 
             sr.Close();
             fs.Close();

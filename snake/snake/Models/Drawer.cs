@@ -23,9 +23,12 @@ namespace snake.models
             {
                 Console.SetCursorPosition(p.x, p.y);
                 Console.Write(sign);
-            }
-        }
 
+            }
+           
+
+        }
+        
         public void Save()
         {
             string fileName = "snake.xml";
@@ -58,5 +61,6 @@ namespace snake.models
                 Game.food = xs.Deserialize(fs) as Food;
             fs.Close();
         }
+        
     }
 }

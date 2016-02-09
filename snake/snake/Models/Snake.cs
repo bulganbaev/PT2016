@@ -8,6 +8,7 @@ namespace snake.models
 {
     public class Snake : Drawer
     {
+        
         public Snake()
         {
             color = ConsoleColor.White;
@@ -30,9 +31,32 @@ namespace snake.models
                 body[0].y == Game.food.body[0].y)
             {
                 eatfood++;
+                
                 body.Add(new Point(0, 0));
                 Game.food.setNewPosition();
+               
             }
+            if(CheckCollisionWithFood())
+            {
+                Game.food.body.Clear();
+            
+                Game.food.setNewPosition();
+            }
+            if(CheckCollisionWithSnake())
+            {
+
+                Game.food.body.Clear();
+                
+                Game.food.setNewPosition();
+            }
+            if(body.Count>3)
+            {
+                body.Clear();
+                body.Add(new Point(10, 10));
+                 int newl= Game.wall.level++;
+                Game.wall.setLevel(newl);
+            }
+            
         }
         public bool CheckCollisionWithWall()
         {
@@ -41,5 +65,20 @@ namespace snake.models
                     return true;
             return false;
         }
+        private bool CheckCollisionWithFood()
+        {
+            foreach (Point p in Game.wall.body)
+                if (p.x == Game.food.body[0].x && p.y == Game.food.body[0].y)
+                    return true;
+            return false;
+        }
+        private bool CheckCollisionWithSnake()
+        {
+            foreach (Point p in Game.snake.body)
+                if (p.x == Game.food.body[0].x && p.y == Game.food.body[0].y)
+                    return true;
+            return false;
+        }
+
     }
 }

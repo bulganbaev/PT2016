@@ -14,12 +14,15 @@ namespace snake.models
         public bool GameOver = false;
         public Game()
         {
+            Console.SetWindowSize(67, 31);
+           
+            ConsoleKeyInfo button = Console.ReadKey();
             while (!GameOver)
             {
-                
+
+              
                 Draw();
                
-                ConsoleKeyInfo button = Console.ReadKey();
                 if (button.Key == ConsoleKey.UpArrow)
                     snake.move(0, -1);
                 if (button.Key == ConsoleKey.DownArrow)
@@ -36,7 +39,11 @@ namespace snake.models
                     Save();
                 if (button.Key == ConsoleKey.F1)
                     Resume();
-              
+
+               
+           
+             
+
             }
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
@@ -46,16 +53,17 @@ namespace snake.models
         }
         public void Draw()
         {
-    
+           
             Console.Clear();
             wall.Draw();
             food.Draw();
             snake.Draw();
+          
         }
         public void Save()
         {
             snake.Save();
-            food.Save();
+            food.Save(); 
             wall.Save();
         }
 
