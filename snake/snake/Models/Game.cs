@@ -15,14 +15,15 @@ namespace snake.models
         public Game()
         {
             Console.SetWindowSize(67, 31);
-           
-            ConsoleKeyInfo button = Console.ReadKey();
+          
             while (!GameOver)
             {
-
-              
+                            
                 Draw();
+                ConsoleKeyInfo button = Console.ReadKey();
+                Console.SetCursorPosition(31,31);
                
+                Console.WriteLine("Your score is {0}", Game.snake.eatfood);
                 if (button.Key == ConsoleKey.UpArrow)
                     snake.move(0, -1);
                 if (button.Key == ConsoleKey.DownArrow)
@@ -39,10 +40,7 @@ namespace snake.models
                     Save();
                 if (button.Key == ConsoleKey.F1)
                     Resume();
-
                
-           
-             
 
             }
             Console.Clear();

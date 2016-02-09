@@ -31,7 +31,6 @@ namespace snake.models
                 body[0].y == Game.food.body[0].y)
             {
                 eatfood++;
-                
                 body.Add(new Point(0, 0));
                 Game.food.setNewPosition();
                
@@ -53,8 +52,7 @@ namespace snake.models
             {
                 body.Clear();
                 body.Add(new Point(10, 10));
-                 int newl= Game.wall.level++;
-                Game.wall.setLevel(newl);
+                Game.wall.setLevel(Game.wall.levelup+1);
             }
             
         }

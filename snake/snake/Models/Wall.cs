@@ -9,19 +9,19 @@ namespace snake.models
 {
     public class Wall: Drawer
     {
-        public int level = 0;
+        public int levelup = 1;
         public Wall()
         {
            
             color = ConsoleColor.Red;
             sign = '#';
-            setLevel(level);
+            setLevel(levelup);
             
         }
 
         public void setLevel(int level)
         {
-            level++;
+           
             string fileName = string.Format(@"C:\Users\User\Desktop\map\level{0}.txt", level);
             FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.ReadWrite);
             StreamReader sr = new StreamReader(fs);
